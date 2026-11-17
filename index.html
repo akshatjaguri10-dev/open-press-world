@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Open Press | Stories That Matter</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Connection -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="website-container">
+
+                    <!-- 1. NAVIGATION BAR -->
+        <header class="navbar">
+
+            <!-- Invisible left spacer (keeps everything perfectly centered) -->
+            <div class="nav-spacer"></div>
+
+            <!-- Center: Logo + Nav Links together -->
+            <div class="nav-center">
+                <a href="#" class="logo">Open Press</a>
+                <span class="nav-divider"></span>
+                <nav class="nav-links" id="navLinks">
+                    <a href="#latest-news">News</a>
+                    <a href="#opinion-section">Opinion</a>
+                    <a href="#sports-section">Sports</a>
+                    <a href="#culture-section">Culture</a>
+                    <a href="#" class="subscribe-btn mobile-subscribe" id="mobileSubscribeBtn">Subscribe</a>
+
+                </nav>
+            </div>
+
+            <!-- Right side: CTA Button & Mobile Menu -->
+            <div class="nav-actions">
+                <a href="#" class="subscribe-btn" id="subscribeBtn">Subscribe</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+                    ☰
+                </button>
+            </div>
+
+        </header>
+
+        <!-- 2.  WELCOME SECTION -->
+        <section class="welcome-section">
+
+            <p class="welcome-label">Welcome to Open Press</p>
+
+            <h1>
+                Your daily source for <span>news</span>
+                <span>sport</span>
+                <span>culture</span>
+                <span>knowledge</span>
+                and <span>ideas</span>
+            </h1>
+
+        </section>
+
+
+        <!-- 3. FEATURED NEWS SECTION -->
+        <section class="featured-section" id="stories">
+
+            <div class="featured-image">
+                <img src="assets/featured.jpg" alt="Featured cinema story">
+            </div>
+
+            <div class="featured-content">
+
+                <div class="publisher">
+                    <span class="publisher-icon">OP</span>
+                    <span>Editorial Desk</span>
+                    <span class="dot">•</span>
+                    <span>12 minutes ago</span>
+                </div>
+
+                <h2>The Stories Behind Modern Cinema</h2>
+
+                <p class="featured-description">
+                    Discover the creative ideas, talented filmmakers
+                    and storytelling techniques changing the way
+                    we experience movies. Explore the latest stories
+                    from the world of entertainment.
+                </p>
+
+                <div class="article-meta">
+                    <a href="#latest-news">Entertainment</a>
+                    <span>•</span>
+                    <span>4 min read</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 4. LATEST NEWS SECTION -->
+        <section class="latest-section" id="latest-news">
+
+            <div class="section-heading">
+                <h2>Latest News</h2>
+                <a href="#latest-news" class="see-all">See all <span>→</span></a>
+            </div>
+
+            <!-- JavaScript fills this grid with live BBC news cards -->
+            <div class="news-grid" id="newsGrid">
+                <p>Loading news...</p>
+            </div>
+
+        </section>
+
+                       <!-- OPINION SECTION -->
+        <section class="latest-section" id="opinion-section">
+            <div class="section-heading">
+                <h2>Opinion</h2>
+                <a href="#opinion-section" class="see-all">See all <span>→</span></a>
+            </div>
+            <!-- Notice the new unique ID here -->
+            <div class="news-grid" id="opinionGrid"></div>
+        </section>
+
+        <!-- SPORTS SECTION -->
+        <section class="latest-section" id="sports-section">
+            <div class="section-heading">
+                <h2>Sports</h2>
+                <a href="#sports-section" class="see-all">See all <span>→</span></a>
+            </div>
+            <div class="news-grid" id="sportsGrid"></div>
+        </section>
+
+        <!-- CULTURE SECTION -->
+        <section class="latest-section" id="culture-section">
+            <div class="section-heading">
+                <h2>Culture</h2>
+                <a href="#culture-section" class="see-all">See all <span>→</span></a>
+            </div>
+            <div class="news-grid" id="cultureGrid"></div>
+        </section>
+
+
+
+        <!-- 5. FOOTER -->
+        <footer class="footer" id="community">
+            <h2>Open Press</h2>
+            <p>Stories that inform, inspire and entertain.</p>
+            <p class="copyright">
+                © <span id="currentYear"></span> Open Press. All rights reserved.
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- SUBSCRIBE  -->
+    <div id="subscribeBox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); align-items: center; justify-content: center; z-index: 999;">
+        <div style="background: white; padding: 30px; border-radius: 8px; text-align: center; width: 300px;">
+            <h3 style="margin-bottom: 15px;">Get News Updates</h3>
+            <input type="email" id="subEmail" placeholder="Your email" style="padding: 10px; width: 100%; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+            <button onclick="submitSub()" style="padding: 10px; width: 100%; background: #df1119; color: white; border: none; border-radius: 4px; cursor: pointer;">Subscribe</button>
+            <button onclick="closeSub()" style="margin-top: 10px; background: none; border: none; color: #666; cursor: pointer; text-decoration: underline;">Cancel</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Connection -->
+    <script src="script.js"></script>
+
+</body>
+</html>
